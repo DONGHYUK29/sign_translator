@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수어 번역기</title>
+</head>
+<body>
+    <h1>수어 번역기</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="업로드">
+    </form>
+
+    {% if filename %}
+    <h2>업로드 된 영상:</h2>
+    <video width="320" height="240" controls>
+        <source src="{{ url_for('static', filename='uploads/' + filename) }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h2>번역:</h2>
+    <p>{{ translation }}</p>
+    {% endif %}
+</body>
+</html>
