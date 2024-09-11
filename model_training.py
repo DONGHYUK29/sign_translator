@@ -14,3 +14,4 @@ def predict_sign_language(model, video_path):
     # 여기서는 간단히 임의의 문자열을 반환
     return "Predicted Sign Language"
 
+#고찬영 변경
